@@ -7,13 +7,16 @@
     <title>Sign Up</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
-            background-image: url('BG.jpg'); 
+            padding: 0;
+            background-image: url('BG.png');
             background-size: cover;
+            /* This makes the background image cover the entire body */
+            background-position: center;
+            /* This centers the background image */
+            background-repeat: no-repeat;
+            /* This prevents the background image from repeating */
+            height: 100vh;
         }
 
         .container {
@@ -23,15 +26,14 @@
             align-items: center;
             /* border: 2px solid black; */
             height: 500px;
-            width:60%;
+            width: 60%;
         }
 
         img {
-            height: 500px;
-            width: 500px;
+            height: 400px;
         }
 
-        .logo { 
+        .logo {
             /* padding: 20px; */
             display: flex;
         }
@@ -39,7 +41,7 @@
         .login-form {
             position: absolute;
             top: 22%;
-            left: 50%;
+            left: 12%;
             /* transform: translate(50%, -50%); */
             /* border: 1px solid black; */
         }
@@ -49,16 +51,15 @@
             justify-content: center;
             align-items: center;
             /* height: 100vh; */
+            margin-bottom: 20px;
         }
 
         .login-form form {
-            background-color: rgba(240, 240, 240, 0.5)
-;
+            background-color: rgba(240, 240, 240, 0.5);
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             width: 100%;
-
         }
 
         .login-form h1 {
@@ -136,7 +137,7 @@
             box-sizing: border-box;
             margin-top: 10px;
         }
-        
+
         /* body {
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
             background-size: 400% 400%;
@@ -158,68 +159,179 @@
         } */
 
         /* Media queries for responsiveness */
-        @media screen and (max-width: 768px) {
-            .container {
-                flex-direction: column; /* Stack elements vertically on smaller screens */
-                height: auto; /* Remove fixed height */
-                padding: 20px; /* Add padding for better spacing */
-                width: 80%; /* Adjust container width */
-            }
 
-            img {
-                height: auto;
-                width: 100%;
-                max-width: 300px; /* Limit maximum width of the image */
-            }
+        .logo-img {
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+        }
 
-            .login-form {
-                top: 0; /* Adjust position to stack it below the logo */
-                margin-top: 20px; /* Add margin for spacing */
-                width: 100%; /* Make form full width */
-            }
+        /* CSS */
+        .button-24 {
+            margin-left: 20px;
+            height: 40px;
+            width: 100px;
+            background: #FF4742;
+            border: 1px solid #FF4742;
+            border-radius: 2px;
+            box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
 
-            .login-form form {
-                padding: 15px; /* Reduce form padding */
-            }
+            outline: 0;
+            text-align: center;
+            text-rendering: geometricprecision;
+            text-transform: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+        }
 
-            .form-control,
-            .submitBtn,
-            .inputBox {
-                width: 100%; /* Make form inputs full width */
-            }
+        .button-24:hover,
+        .button-24:active {
+            background-color: initial;
+            background-position: 0 0;
+            color: #FF4742;
+        }
+
+        .button-24:active {
+            opacity: .5;
+        }
+
+
+        /* CSS */
+        .button-68 {
+            appearance: none;
+            backface-visibility: hidden;
+            background-color: #27ae60;
+            border-radius: 8px;
+            border-style: none;
+            box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: normal;
+            line-height: 1.5;
+            outline: none;
+            overflow: hidden;
+            padding: 13px 20px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transform: translate3d(0, 0, 0);
+            transition: all .3s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+
+        .button-68:hover {
+            background-color: #1e8449;
+            opacity: 1;
+            transform: translateY(0);
+            transition-duration: .35s;
+        }
+
+        .button-68:active {
+            transform: translateY(2px);
+            transition-duration: .35s;
+        }
+
+        .button-68:hover {
+            box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+        }
+
+
+
+        input[type=text] {
+            appearance: none;
+            border: none;
+            outline: none;
+            border-bottom: 0.2em solid #2196F3;
+            background: rgba(33, 150, 243, 0.2);
+            border-radius: 0.2em 0.2em 0 0;
+            padding: 0.4em;
+            color: black;
+            font-size: larger;
+        }
+
+        input[type=password] {
+            appearance: none;
+            border: none;
+            outline: none;
+            border-bottom: 0.2em solid #2196F3;
+            background: rgba(33, 150, 243, 0.2);
+            border-radius: 0.2em 0.2em 0 0;
+            padding: 0.4em;
+            color: black;
+            font-size: larger;
+        }
+
+        ::placeholder {
+            font-size: 20px;
+            /* Change the font size */
+            font-style: italic;
+            /* Change the font style */
+            color: darkblue;
+            /* Change the color of the placeholder text */
+        }
+
+        #labelss {
+            font-size: 20px;
+            color: black;
+            transition: all 0.3s ease-in-out;
+            pointer-events: none;
         }
     </style>
 </head>
 
-<body >
+<body>
     <div class="container">
         <div class="row  logo">
             <div class=" logo-img">
                 <img src="logo.png" alt="">
             </div>
-            <div class=" login-form" style="width:502px ; height: 450px;">
+            <div class=" login-form" style="width:502px ; height: 490px;">
 
 
                 <form action="" style="height: 100%;">
-                    <h1>Sign Up</h1>
+                    <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 50px;">Sign Up</h1>
                     <div class="form-group">
-                        <label for="">Username</label>
-                        <input type="text" class="form-control" placeholder="Your Email" value="" />
+                        <label id="labelss" for="maillabel">
+                            <h3>Username</h3>
+                        </label>
+                        <input type="text" id="maillabel" class="form-control" placeholder="Your Email" value="" />
                     </div>
                     <div class="form-group">
-                        <label for="">Password</label>
+                        <label id="labelss" for="">
+                            <h3>Password</h3>
+                        </label>
                         <input type="password" class="form-control" placeholder="Your Password" value="" />
                     </div>
                     <div class="captchaBox">
                         <div style="display: flex; gap: px;">
-                            <canvas id="canvas" width="200" height="40"></canvas>
-                            <button class="reloadBtn">Reload</button>
+                            <canvas style="background-color: lightblue;" id="canvas" width="200" height="40"></canvas>
+
+                            <button class="reloadBtn button-24" role="button"><img style="width: 30px; height: 30px; " src="./reload.png" alt=""></button>
+
                         </div>
                         <input type="text" name="" class="inputBox" placeholder="Enter a Captcha code"><br>
                         <!-- <button class="submitBtn">Submit</button> -->
                     </div>
                     <div class="form-group">
-                        <input type="submit" class="submitBtn" id="verify-captcha" value="Login" />
+
+                        <input type="submit" class="submitBtn button-68" id="verify-captcha" value="Login" />
                     </div>
                 </form>
 
